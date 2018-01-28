@@ -5,3 +5,9 @@ This app fetches list of currently popular or top rated movies from TheMovieData
 To fetch data from TheMovieDatabase server you need an API KEY.
 
 Put your API key in the string variable API_KEY present in the class NetworkUtils of util package.
+
+This app makes use of the following external libraries.
+--------------------------------------------------------
+Movie data is provided by https://www.themoviedb.org/
+Volley HTTP library https://developer.android.com/training/volley/index.html
+Image caching and loading framework http://square.github.io/picasso/
