@@ -19,32 +19,32 @@ public class Configuration implements Parcelable {
     };
     private String base_url;
     private String secure_base_url;
-    private String[] backdrop_sizes, logo_sizes, poster_sizes, profile_sizes, still_sizes;
+    private String[] backdropSizes, logoSizes, posterSizes, profile_sizes, stillSizes;
 
     public Configuration(String base_url,
                          String secure_base_url,
-                         String[] backdrop_sizes,
-                         String[] logo_sizes,
-                         String[] poster_sizes,
+                         String[] backdropSizes,
+                         String[] logoSizes,
+                         String[] posterSizes,
                          String[] profile_sizes,
-                         String[] still_sizes) {
+                         String[] stillSizes) {
         this.base_url = base_url;
         this.secure_base_url = secure_base_url;
-        this.backdrop_sizes = backdrop_sizes;
-        this.logo_sizes = logo_sizes;
-        this.poster_sizes = poster_sizes;
+        this.backdropSizes = backdropSizes;
+        this.logoSizes = logoSizes;
+        this.posterSizes = posterSizes;
         this.profile_sizes = profile_sizes;
-        this.still_sizes = still_sizes;
+        this.stillSizes = stillSizes;
     }
 
     public Configuration(Parcel in) {
         this.base_url = in.readString();
         this.secure_base_url = in.readString();
-        this.backdrop_sizes = in.createStringArray();
-        this.logo_sizes = in.createStringArray();
-        this.poster_sizes = in.createStringArray();
+        this.backdropSizes = in.createStringArray();
+        this.logoSizes = in.createStringArray();
+        this.posterSizes = in.createStringArray();
         this.profile_sizes = in.createStringArray();
-        this.still_sizes = in.createStringArray();
+        this.stillSizes = in.createStringArray();
     }
 
     @Override
@@ -56,38 +56,38 @@ public class Configuration implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(this.base_url);
         parcel.writeString(this.secure_base_url);
-        parcel.writeStringArray(this.backdrop_sizes);
-        parcel.writeStringArray(this.logo_sizes);
-        parcel.writeStringArray(this.poster_sizes);
+        parcel.writeStringArray(this.backdropSizes);
+        parcel.writeStringArray(this.logoSizes);
+        parcel.writeStringArray(this.posterSizes);
         parcel.writeStringArray(this.profile_sizes);
-        parcel.writeStringArray(this.still_sizes);
+        parcel.writeStringArray(this.stillSizes);
     }
 
-    public String getBase_url() {
+    public String getBaseUrl() {
         return this.base_url;
     }
 
-    public String getSecure_base_url() {
+    public String getSecureBaseUrl() {
         return this.secure_base_url;
     }
 
-    public String[] getBackdrop_sizes() {
-        return this.backdrop_sizes;
+    public String[] getBackdropSizes() {
+        return this.backdropSizes;
     }
 
-    public String[] getLogo_sizes() {
-        return this.logo_sizes;
+    public String[] getLogoSizes() {
+        return this.logoSizes;
     }
 
-    public String[] getPoster_sizes() {
-        return this.poster_sizes;
+    public String[] getPosterSizes() {
+        return this.posterSizes;
     }
 
-    public String[] getProfile_sizes() {
+    public String[] getProfileSizes() {
         return this.profile_sizes;
     }
 
-    public String[] getStill_sizes() {
-        return this.still_sizes;
+    public String[] getStillSizes() {
+        return this.stillSizes;
     }
 }

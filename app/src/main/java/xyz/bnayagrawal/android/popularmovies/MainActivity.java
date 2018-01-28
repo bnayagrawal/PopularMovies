@@ -265,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
                                 title = item.getString("title");
 
                                 //build poster path
-                                poster_path = mConfiguration.getBase_url()
+                                poster_path = mConfiguration.getBaseUrl()
                                         + "w185"
                                         + item.getString("poster_path");
 

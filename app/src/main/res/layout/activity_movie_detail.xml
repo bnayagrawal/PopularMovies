@@ -1,54 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="12dp"
     android:background="@color/colorPrimaryDark"
+    android:padding="12dp"
     tools:context="xyz.bnayagrawal.android.popularmovies.MovieDetailActivity">
 
-    <ImageView
-        android:contentDescription="@null"
-        android:id="@+id/img_thumbnail"
-        android:scaleType="fitXY"
-        android:layout_width="@dimen/small_thumbnail_width"
-        android:layout_height="@dimen/small_thumbnail_height"
-        android:layout_marginEnd="12dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/img_thumbnail"
-        android:textSize="@dimen/large_text"
-        android:textStyle="bold"
-        android:textColor="@color/colorAccent" />
+        <ImageView
+            android:id="@+id/img_thumbnail"
+            android:layout_width="@dimen/small_thumbnail_width"
+            android:layout_height="@dimen/small_thumbnail_height"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY" />
 
-    <TextView
-        android:id="@+id/tv_overview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:textColor="@color/lightGrey"
-        android:layout_toEndOf="@+id/img_thumbnail"
-        android:layout_below="@+id/tv_title"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/img_thumbnail"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/large_text"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv_release_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:textColor="@android:color/white"
-        android:layout_toEndOf="@+id/img_thumbnail"
-        android:layout_below="@+id/tv_overview"/>
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@+id/img_thumbnail"
+            android:textColor="@color/lightGrey" />
 
-    <TextView
-        android:id="@+id/tv_vote_average"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:textColor="@color/lightYellow"
-        android:layout_toEndOf="@+id/img_thumbnail"
-        android:layout_below="@+id/tv_release_date"/>
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_overview"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@+id/img_thumbnail"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_vote_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_release_date"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@+id/img_thumbnail"
+            android:textColor="@color/lightYellow" />
+    </RelativeLayout>
+</ScrollView>
